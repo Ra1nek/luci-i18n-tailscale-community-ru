@@ -1,15 +1,27 @@
-# Tailscale LuCI RU 🇷🇺
+<p align="center">
+  <img src="docs/assets/mark.svg" width="80" height="80" alt="Tailscale LuCI RU">
+</p>
 
-**Привычный Tailscale — с русскими настройками и аккуратным интерфейсом.**
+<h1 align="center">Tailscale LuCI RU</h1>
 
-Дополнение для **Tailscale Community в OpenWrt** объединяет русский перевод, понятные уведомления и исправления оформления страницы LuCI. Настройки, подписи и кнопки удобнее читать на компьютере и телефоне.
+<p align="center">
+  <strong>Tailscale в LuCI — по-русски.</strong><br>
+  Перевод настроек, понятные пояснения и аккуратное отображение на узком экране.
+</p>
 
-[![Лицензия](https://img.shields.io/badge/License-Apache--2.0-64748b?style=flat-square)](LICENSE)
-[![OpenWrt](https://img.shields.io/badge/OpenWrt-25.12-00a3e0?style=flat-square)](#совместимость)
-[![Tailscale Community](https://img.shields.io/badge/LuCI-Tailscale_Community-2563eb?style=flat-square)](https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community)
-[![Формат пакета](https://img.shields.io/badge/Package-Native_APK-16a34a?style=flat-square)](#установка)
+<p align="center">
+  <a href="https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml"><img src="https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml/badge.svg?branch=main" alt="Статус сборки OpenWrt"></a>
+  <a href="#совместимость"><img src="https://img.shields.io/badge/OpenWrt-25.12-2563eb?style=flat-square" alt="OpenWrt 25.12"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-64748b?style=flat-square" alt="Лицензия Apache-2.0"></a>
+</p>
 
-**[Скачать пакет](https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml)** · **[Установка](#установка)** · **[Вопросы и ответы](#часто-задаваемые-вопросы)** · **[Помощь](https://github.com/Ra1nek/tailscale-luci-ru/issues)**
+<p align="center">
+  <a href="#установка">Установка</a> ·
+  <a href="#что-меняется">Возможности</a> ·
+  <a href="#совместимость">Совместимость</a> ·
+  <a href="#разработка">Разработка</a> ·
+  <a href="https://github.com/Ra1nek/tailscale-luci-ru/issues">Сообщить об ошибке</a>
+</p>
 
 ---
 
