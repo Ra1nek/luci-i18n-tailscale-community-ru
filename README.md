@@ -81,12 +81,34 @@ rm -f /tmp/luci-indexcache.*
 
 ## Структура проекта
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/assets/structure-dark-mobile.svg">
-  <source media="(max-width: 600px)" srcset="docs/assets/structure-light-mobile.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/structure-dark.svg">
-  <img src="docs/assets/structure-light.svg" alt="Структура проекта. В package находится единый пакет с оформлением, переводом и подключением к LuCI. Рядом — инструменты сборки и документы." width="1160">
-</picture>
+```mermaid
+flowchart TB
+    project["tailscale-luci-ru"]
+
+    project --> package["📦 package<br/>Единый пакет"]
+    project --> tools["⚙️ Инструменты"]
+    project --> docs["📖 Документы"]
+
+    package --> addon["luci-app-tailscale-community-ru"]
+    addon --> makefile["Makefile<br/>Сборка пакета"]
+    addon --> htdocs["htdocs/<br/>Оформление и сообщения"]
+    addon --> po["po/ru/<br/>Русский перевод"]
+    addon --> root["root/<br/>Подключение к LuCI"]
+
+    tools --> scripts["scripts/<br/>Сценарии сборки"]
+    tools --> tests["tests/<br/>Проверка перевода"]
+    tools --> workflow[".github/workflows/<br/>Сборка на GitHub"]
+
+    docs --> readme["README.md<br/>Описание и установка"]
+    docs --> contributing["CONTRIBUTING.md<br/>Участие в проекте"]
+    docs --> assets["docs/assets/<br/>Изображения"]
+    docs --> license["NOTICE · LICENSE<br/>Авторы и лицензия"]
+
+    classDef main fill:#2563eb,color:#fff,stroke:#2563eb,stroke-width:2px
+    classDef group fill:#edf4ff,color:#18345c,stroke:#8bace5,stroke-width:1.5px
+    class project main
+    class package,tools,docs group
+```
 
 ## Помощь и предложения
 
