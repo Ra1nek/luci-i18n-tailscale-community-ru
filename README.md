@@ -42,35 +42,13 @@
 
 ## Установка
 
-### 1. Скачайте пакет
-
-Скачайте APK из выпуска **1.1.0-r1** и сохраните его в отдельную папку.
-
-**[Скачать APK →](https://github.com/Ra1nek/tailscale-luci-ru/releases/download/v1.1.0-r1/luci-app-tailscale-community-ru-1.1.0-r1.apk)** · [Все выпуски](https://github.com/Ra1nek/tailscale-luci-ru/releases)
-
-### 2. Передайте пакет на роутер
-
-Откройте терминал в папке со скачанным APK и выполните команду. Замените `192.168.1.1` на адрес своего роутера.
+Подключитесь к роутеру по SSH под пользователем root и выполните команду.
 
 ```sh
-scp -O luci-app-tailscale-community-ru-1.1.0-r1.apk root@192.168.1.1:/tmp/
+sh -c 'set -e; f=$(mktemp /tmp/tailscale-ru-install.XXXXXX); trap "rm -f \"$f\"" EXIT; wget -T 60 -O "$f" https://raw.githubusercontent.com/Ra1nek/tailscale-luci-ru/main/install.sh; sh "$f"'
 ```
 
-### 3. Установите дополнение
-
-Подключитесь к роутеру по SSH.
-
-```sh
-ssh root@192.168.1.1
-```
-
-Выполните команду установки.
-
-```sh
-apk update && apk add luci-app-tailscale-community tailscale && apk add --allow-untrusted /tmp/luci-app-tailscale-community-ru-1.1.0-r1.apk && rm -f /tmp/luci-indexcache.*
-```
-
-После установки выберите **русский язык в LuCI** и откройте **VPN → Tailscale**.
+Скрипт скачает пакет, проверит его целостность и установит дополнение вместе с необходимыми компонентами. После установки выберите **русский язык в LuCI** и откройте **VPN → Tailscale**.
 
 <details>
 <summary><strong>Удаление дополнения</strong></summary>
@@ -89,6 +67,7 @@ apk del luci-app-tailscale-community-ru && rm -f /tmp/luci-indexcache.*
 
 ```text
 tailscale-luci-ru/
+├── install.sh                   Установка на роутер
 ├── package/
 │   └── luci-app-tailscale-community-ru/
 │       ├── Makefile             Сборка пакета

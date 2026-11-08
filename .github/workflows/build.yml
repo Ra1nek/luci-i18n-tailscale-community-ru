@@ -6,6 +6,7 @@ on:
     tags: ['v*']
     paths:
       - 'package/**'
+      - 'install.sh'
       - 'scripts/**'
       - 'tests/**'
       - '.github/workflows/build.yml'
@@ -14,6 +15,7 @@ on:
     branches: [main]
     paths:
       - 'package/**'
+      - 'install.sh'
       - 'scripts/**'
       - 'tests/**'
       - '.github/workflows/build.yml'
@@ -40,6 +42,9 @@ jobs:
 
       - name: Validate source and translations
         run: python3 scripts/check.py
+
+      - name: Check installer syntax
+        run: sh -n install.sh
 
       - name: Install SDK prerequisites
         run: |
