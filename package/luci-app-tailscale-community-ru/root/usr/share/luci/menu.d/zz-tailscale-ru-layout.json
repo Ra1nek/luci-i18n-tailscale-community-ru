@@ -1,0 +1,8 @@
+{
+  "admin/vpn/tailscale": {
+    "action": {
+      "type": "template",
+      "path": "tailscale-ru"
+    }
+  }
+}
