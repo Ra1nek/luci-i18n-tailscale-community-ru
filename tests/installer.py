@@ -41,8 +41,8 @@ case "$SCENARIO:$*" in
 esac
 ''')
         source = re.sub(r"SHA256='[a-f0-9]{64}'", "SHA256='" + hashlib.sha256(fixture_bytes).hexdigest() + "'", original)
-        source = source.replace('/etc/openwrt_release', release.as_posix())
         source = source.replace('/tmp/', root.as_posix() + '/')
+        source = source.replace('/etc/openwrt_release', release.as_posix())
         script = root / 'install.sh'
         script.write_bytes(source.encode('utf-8'))
         environment = os.environ.copy()
