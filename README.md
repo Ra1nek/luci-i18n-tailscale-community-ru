@@ -1,53 +1,142 @@
-# Tailscale LuCI RU
+<p align="center">
+  <img src="docs/assets/mark.svg" width="80" height="80" alt="Tailscale LuCI RU">
+</p>
 
-Русский перевод и оформление Tailscale Community для OpenWrt. Одно дополнение объединяет перевод страницы, сообщения состояния и исправления отображения на узком экране.
+<h1 align="center">Tailscale LuCI RU</h1>
+
+<p align="center">
+  <strong>Tailscale в LuCI — по-русски.</strong><br>
+  Перевод настроек, понятные пояснения и аккуратное отображение на узком экране.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml"><img src="https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml/badge.svg?branch=main" alt="Статус сборки OpenWrt"></a>
+  <a href="#совместимость"><img src="https://img.shields.io/badge/OpenWrt-25.12-2563eb?style=flat-square" alt="OpenWrt 25.12"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-64748b?style=flat-square" alt="Лицензия Apache-2.0"></a>
+</p>
+
+<p align="center">
+  <a href="#установка">Установка</a> ·
+  <a href="#возможности">Возможности</a> ·
+  <a href="#совместимость">Совместимость</a> ·
+  <a href="#разработка">Разработка</a> ·
+  <a href="https://github.com/Ra1nek/tailscale-luci-ru/issues">Сообщить об ошибке</a>
+</p>
+
+---
+
+Дополнение для Tailscale Community в OpenWrt. Русский перевод и оформление страницы устанавливаются одним пакетом `luci-app-tailscale-community-ru`.
 
 ## Возможности
 
-- Русские названия настроек и пояснения к ним.
-- Перевод известных сообщений состояния Tailscale.
-- Читаемые кнопки, подписи и заголовки таблицы на телефоне и компьютере.
-- Общий пакет перевода и оформления.
+| Возможность | Что меняется |
+| --- | --- |
+| **Настройки на русском** | Названия и пояснения помогают выбрать, как подключаться к Tailscale и пользоваться домашней сетью. |
+| **Понятные сообщения** | Известные уведомления о состоянии службы получают русский перевод. |
+| **Удобнее на узком экране** | Исправлены переносы, подписи, кнопки и заголовки таблицы устройств. |
 
-Дополнение использует штатную страницу Tailscale Community. Стили и обработка сообщений ограничены русской страницей Tailscale.
-
-## Совместимость
-
-Нужны OpenWrt 25.12, LuCI и `luci-app-tailscale-community`. Пакет зависит от `tailscale`, `luci-base` и `ucode-mod-fs`. SDK и официальные feeds для сборки закреплены на OpenWrt 25.12.6.
-
-Перевод и оформление проверены с Tailscale Community 4.5.1-r1. Обновление исходного приложения может изменить тексты и разметку, поэтому совместимость с новой версией нужно проверять отдельно. Пакет `luci-app-tailscale` из других проектов использует другой интерфейс.
-
-Каталог также проверяется по исходной странице из официального feed OpenWrt 25.12, закреплённого в сборке. Эта проверка охватывает тексты и параметры сообщений. Проверка отображения в браузере относится к версии 4.5.1-r1.
+Оформление и дополнительные переводы применяются к русской странице Tailscale. Страница использует штатный интерфейс Tailscale Community.
 
 ## Установка
 
-Соберите пакет через SDK или скачайте архив пакета со страницы завершённой сборки GitHub Actions. Готовый пакет имеет архитектуру `all`. Совместимость определяется выпуском OpenWrt и версией приложения.
+### 1. Скачайте пакет
 
-На роутере выполните команды, подставив имя скачанного APK.
+Откройте последнюю успешную сборку ветки `main`. В разделе **Artifacts** скачайте архив **luci-app-tailscale-community-ru-openwrt-25.12.6** и распакуйте его.
+
+**[Открыть сборки и скачать APK →](https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml)**
+
+В архиве находятся APK, файл `SHA256SUMS` для проверки загрузки и сведения о сборке.
+
+> [!NOTE]
+> Для скачивания артефактов GitHub нужен вход в аккаунт.
+
+### 2. Передайте файлы на роутер
+
+Скопируйте APK и `SHA256SUMS` в `/tmp` на роутере. Например, из папки с распакованным архивом можно выполнить команду ниже. Замените `192.168.1.1` на адрес своего роутера.
 
 ```sh
-apk update
-apk add luci-app-tailscale-community tailscale
-apk add --allow-untrusted /tmp/luci-app-tailscale-community-ru-1.1.0-r1.apk
+scp -O luci-app-tailscale-community-ru-1.1.0-r1.apk SHA256SUMS root@192.168.1.1:/tmp/
+```
+
+### 3. Установите дополнение
+
+Подключитесь к роутеру по SSH и выполните команды для версии **1.1.0-r1**.
+
+```sh
+cd /tmp &&
+sha256sum -c SHA256SUMS &&
+apk update &&
+apk add luci-app-tailscale-community tailscale &&
+apk add --allow-untrusted ./luci-app-tailscale-community-ru-1.1.0-r1.apk &&
 rm -f /tmp/luci-indexcache.*
 ```
 
-`--allow-untrusted` нужен для локального APK, пока пакет распространяется без подписи репозитория. Сверьте SHA-256 с файлом `SHA256SUMS` из той же сборки.
+Продолжайте установку после успешной проверки SHA-256. Параметр `--allow-untrusted` разрешает установить локальный APK без подписи доверенного репозитория.
 
-В LuCI выберите русский язык и заново откройте страницу Tailscale. Для удаления дополнения выполните `apk del luci-app-tailscale-community-ru`, очистите кэш LuCI указанной выше командой и обновите страницу браузера.
+Выберите русский язык в LuCI и заново откройте **VPN → Tailscale**.
 
-## Сборка
+## Совместимость
 
-Нужен Linux x86-64 и зависимости OpenWrt SDK. Путь к рабочей копии должен быть без пробелов. Сценарий скачивает официальный SDK, проверяет SHA-256, подключает этот репозиторий как локальный feed и собирает пакет штатными средствами OpenWrt.
+| Компонент | Требование |
+| --- | --- |
+| OpenWrt | Ветка **25.12**, пакетный менеджер APK. |
+| Интерфейс | **luci-app-tailscale-community**. |
+| Служба | **tailscale**. |
+| LuCI | **luci-base** и **ucode-mod-fs**. |
+| Процессор | Пакет содержит перевод, стили и JavaScript, его архитектура — **noarch**. |
+
+Нужные зависимости указаны в пакете. Используйте репозитории своего выпуска OpenWrt.
+
+**Что проверено**
+
+- Сборка единого APK через официальный SDK **OpenWrt 25.12.6**.
+- Полнота перевода по странице **Tailscale Community 4.5.1-r1** и закреплённой версии из официального feed **OpenWrt 25.12**.
+- Параметры сообщений, JavaScript и обработка известных уведомлений о состоянии службы.
+- Оформление страницы **4.5.1-r1** при разработке исходных дополнений.
+
+> [!IMPORTANT]
+> Единый пакет прошёл сборку SDK и автоматические проверки. Отдельная проверка объединённого пакета в браузере ещё предстоит. При обновлении Tailscale Community нужно повторно сверять тексты и разметку страницы.
+
+## Вопросы
+
+<details>
+<summary><strong>Почему часть сообщений может остаться на английском?</strong></summary>
+
+Дополнение переводит настройки страницы и известные сообщения состояния. Новые сообщения, которые пришли от службы Tailscale, сохраняются в исходном виде до добавления перевода. Приложите такой текст к сообщению об ошибке, скрыв личные данные.
+
+</details>
+
+<details>
+<summary><strong>Как удалить дополнение?</strong></summary>
+
+Выполните команды на роутере, затем обновите страницу LuCI.
 
 ```sh
+apk del luci-app-tailscale-community-ru
+rm -f /tmp/luci-indexcache.*
+```
+
+</details>
+
+## Разработка
+
+Исходники перевода, оформления и упаковки находятся в одном репозитории. Правки проходят проверку каталога и сборку APK в GitHub Actions.
+
+<details>
+<summary><strong>Проверить исходники и собрать пакет</strong></summary>
+
+Для проверки нужны Python 3 и Node.js. Для SDK нужен Linux x86-64 с [зависимостями OpenWrt](https://openwrt.org/docs/guide-developer/toolchain/using_the_sdk). Используйте обычного пользователя и путь к рабочей копии без пробелов.
+
+```sh
+git clone https://github.com/Ra1nek/tailscale-luci-ru.git
+cd tailscale-luci-ru
 python3 scripts/check.py
 bash scripts/ci-build.sh
 ```
 
-APK, контрольные суммы, сведения о сборке и журнал появятся в `artifacts/`. Для проверки исходников нужен Python 3 и Node.js. Сборка выполняется от обычного пользователя.
+Сценарий загружает SDK **25.12.6**, проверяет его SHA-256, подключает закреплённые официальные feeds и этот проект как локальный feed. Затем собирает `po2lmo` и единый пакет. APK, контрольные суммы, сведения о сборке и журнал сохраняются в `artifacts/`.
 
-Для подключения к уже подготовленному SDK добавьте feed и соберите пакет.
+Для уже подготовленного SDK с официальным feed LuCI добавьте локальный feed проекта.
 
 ```sh
 printf '\nsrc-link tailscale_ru /path/to/tailscale-luci-ru\n' >> feeds.conf
@@ -58,14 +147,18 @@ make package/luci-base/host/compile V=s
 make package/luci-app-tailscale-community-ru/compile V=s NO_DEPS=1
 ```
 
-Официальный feed LuCI должен быть подключён. В `menuconfig` выберите пакет в разделе LuCI → Applications.
+В `menuconfig` выберите пакет в разделе **LuCI → Applications**.
 
-## Структура
+</details>
+
+<details>
+<summary><strong>Структура проекта</strong></summary>
 
 ```text
 package/luci-app-tailscale-community-ru/
 ├── Makefile
 ├── LICENSE
+├── NOTICE
 ├── htdocs/luci-static/resources/tailscale-ru/
 │   ├── health.js
 │   ├── layout.css
@@ -79,14 +172,22 @@ scripts/
 tests/
 ```
 
-`htdocs` устанавливается в `/www`, `root` содержит шаблон и дополнение меню LuCI. Каталог PO компилируется штатным `po2lmo` из SDK в `tailscale.ru.lmo`. Домен `tailscale` соответствует исходной странице. Один Makefile собирает единый пакет. Правила для правок описаны в [CONTRIBUTING.md](CONTRIBUTING.md).
+`htdocs` устанавливается в `/www`, `root` содержит шаблон и запись меню LuCI. Штатный `po2lmo` из SDK компилирует каталог в `tailscale.ru.lmo`. Домен `tailscale` соответствует исходной странице приложения.
 
-## Источники и лицензия
+</details>
 
-Основа перевода — проект nagual2, Apache-2.0. Перевод дополнен и вычитан, оформление выделено в отдельные ресурсы страницы. Авторство и сведения об изменениях сохранены в `NOTICE`.
+## Участие в проекте
 
-- [Tailscale Community](https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community)
-- [Исходный русский перевод](https://github.com/nagual2/luci-i18n-tailscale-community-ru)
-- [Официальный LuCI](https://github.com/openwrt/luci)
-- [Сборка пакетов через OpenWrt SDK](https://openwrt.org/docs/guide-developer/toolchain/using_the_sdk)
-- [Лицензия Apache-2.0](LICENSE)
+Нашли неточный перевод или проблему с отображением? Укажите версию OpenWrt, версию Tailscale Community и шаги воспроизведения. Для ошибки оформления приложите снимок экрана и ширину окна. Скройте адреса устройств, ключи и другие личные данные.
+
+**[Создать issue](https://github.com/Ra1nek/tailscale-luci-ru/issues/new)** · **[Предложить правку](CONTRIBUTING.md)**
+
+## Авторы и лицензия
+
+Проект использует интерфейс Tailscale Community и русский перевод nagual2. Перевод дополнен и вычитан, оформление и сообщения состояния объединены в отдельный пакет.
+
+- [Tailscale Community](https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community) — исходное приложение для LuCI.
+- [nagual2](https://github.com/nagual2/luci-i18n-tailscale-community-ru) — основа русского перевода.
+- [OpenWrt и LuCI](https://github.com/openwrt/luci) — платформа и средства сборки.
+
+Проект распространяется по **Apache-2.0**. Авторство и сведения об изменениях приведены в [NOTICE](NOTICE), полный текст лицензии — в [LICENSE](LICENSE).
