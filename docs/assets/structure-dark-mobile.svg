@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1410" viewBox="0 0 600 1410" fill="none">
+<title>Структура Tailscale LuCI RU</title>
+<desc>Единый пакет с переводом и оформлением, инструменты сборки и документы проекта.</desc>
+<rect width="600" height="1410" rx="20" fill="#0d1117"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<path d="M32 89V1344M32 192H54M32 682H54M32 1042H54" stroke="#304057" stroke-width="3"/>
+<rect x="24" y="24" width="552" height="66" rx="14" fill="#1c3050" stroke="#82adff"/>
+<text x="48" y="66" font-size="27" font-weight="650" fill="#82adff">tailscale-luci-ru/</text>
+<rect x="54" y="134" width="522" height="450" rx="16" fill="#161f2d" stroke="#304057"/>
+<rect x="54" y="624" width="522" height="320" rx="16" fill="#161f2d" stroke="#304057"/>
+<rect x="54" y="984" width="522" height="390" rx="16" fill="#161f2d" stroke="#304057"/>
+<text x="80" y="182" font-size="28" font-weight="650" fill="#82adff">package/</text>
+<text x="80" y="216" font-size="21" font-weight="400" fill="#a8b7cc">luci-app-tailscale-community-ru/</text>
+<path d="M80 234H550" stroke="#304057"/>
+<rect x="80" y="261" width="6" height="6" rx="2" fill="#82adff"/>
+<text x="100" y="277" font-size="26" font-weight="600" fill="#e6edf3">Makefile</text>
+<text x="100" y="306" font-size="22" font-weight="400" fill="#a8b7cc">Сборка единого пакета</text>
+<rect x="80" y="337" width="6" height="6" rx="2" fill="#82adff"/>
+<text x="100" y="353" font-size="26" font-weight="600" fill="#e6edf3">htdocs/</text>
+<text x="100" y="382" font-size="22" font-weight="400" fill="#a8b7cc">Оформление и сообщения</text>
+<rect x="80" y="413" width="6" height="6" rx="2" fill="#82adff"/>
+<text x="100" y="429" font-size="26" font-weight="600" fill="#e6edf3">po/ru/</text>
+<text x="100" y="458" font-size="22" font-weight="400" fill="#a8b7cc">Русский перевод</text>
+<rect x="80" y="489" width="6" height="6" rx="2" fill="#82adff"/>
+<text x="100" y="505" font-size="26" font-weight="600" fill="#e6edf3">root/</text>
+<text x="100" y="534" font-size="22" font-weight="400" fill="#a8b7cc">Подключение к LuCI</text>
+<text x="80" y="672" font-size="28" font-weight="650" fill="#e6edf3">Инструменты</text>
+<text x="80" y="729" font-size="26" font-weight="600" fill="#82adff">scripts/</text>
+<text x="80" y="758" font-size="22" font-weight="400" fill="#a8b7cc">Сценарии сборки</text>
+<text x="80" y="809" font-size="26" font-weight="600" fill="#82adff">tests/</text>
+<text x="80" y="838" font-size="22" font-weight="400" fill="#a8b7cc">Проверка перевода</text>
+<text x="80" y="889" font-size="26" font-weight="600" fill="#82adff">.github/workflows/</text>
+<text x="80" y="918" font-size="22" font-weight="400" fill="#a8b7cc">Сборка на GitHub</text>
+<text x="80" y="1032" font-size="28" font-weight="650" fill="#e6edf3">Документы</text>
+<text x="80" y="1089" font-size="26" font-weight="600" fill="#82adff">README.md</text>
+<text x="80" y="1118" font-size="22" font-weight="400" fill="#a8b7cc">Описание и установка</text>
+<text x="80" y="1169" font-size="26" font-weight="600" fill="#82adff">CONTRIBUTING.md</text>
+<text x="80" y="1198" font-size="22" font-weight="400" fill="#a8b7cc">Участие в проекте</text>
+<text x="80" y="1249" font-size="26" font-weight="600" fill="#82adff">docs/assets/</text>
+<text x="80" y="1278" font-size="22" font-weight="400" fill="#a8b7cc">Изображения</text>
+<text x="80" y="1329" font-size="26" font-weight="600" fill="#82adff">NOTICE · LICENSE</text>
+<text x="80" y="1358" font-size="22" font-weight="400" fill="#a8b7cc">Авторы и лицензия</text>
+</g>
+</svg>

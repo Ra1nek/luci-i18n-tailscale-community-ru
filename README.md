@@ -81,26 +81,12 @@ rm -f /tmp/luci-indexcache.*
 
 ## Структура проекта
 
-```text
-tailscale-luci-ru/
-│
-├── package/
-│   └── luci-app-tailscale-community-ru/
-│       ├── Makefile                Сборка единого пакета
-│       ├── htdocs/                 Оформление и сообщения
-│       ├── po/ru/                 Русский перевод
-│       └── root/                  Подключение к LuCI
-│
-├── docs/assets/                   Изображения для README
-├── scripts/                       Сценарии сборки
-├── tests/                         Проверка перевода
-├── .github/workflows/             Автоматическая сборка
-│
-├── README.md                      Описание и установка
-├── CONTRIBUTING.md                Как предложить улучшение
-├── NOTICE                         Авторы и источники
-└── LICENSE                        Лицензия Apache-2.0
-```
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/assets/structure-dark-mobile.svg">
+  <source media="(max-width: 600px)" srcset="docs/assets/structure-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/structure-dark.svg">
+  <img src="docs/assets/structure-light.svg" alt="Структура проекта. В package находится единый пакет с оформлением, переводом и подключением к LuCI. Рядом — инструменты сборки и документы." width="1160">
+</picture>
 
 ## Помощь и предложения
 
