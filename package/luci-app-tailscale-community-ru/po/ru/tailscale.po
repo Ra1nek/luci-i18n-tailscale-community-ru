@@ -295,7 +295,7 @@ msgid "Logs"
 msgstr "Журнал"
 
 msgid "MagicDNS: Tailscale overrides resolv.conf."
-msgstr "MagicDNS: Tailscale задаёт DNS-серверы в resolv.conf."
+msgstr "Tailscale сам настраивает DNS на роутере."
 
 msgid "Masquerading and MSS Clamping (MTU fix) are enabled to keep connections stable."
 msgstr "Для стабильной связи включает подмену исходящего адреса и ограничение размера TCP-сегментов."
@@ -337,7 +337,7 @@ msgid "OpenWrt Forward"
 msgstr "Через OpenWrt"
 
 msgid "OpenWrt Forward: MagicDNS via dnsmasq forwarding.(Only support ts.net)"
-msgstr "Через OpenWrt: dnsmasq пересылает запросы MagicDNS. Поддерживаются только имена в домене ts.net."
+msgstr "OpenWrt перенаправляет запросы к именам устройств Tailscale. Поддерживаются только имена в домене ts.net."
 
 msgid "Operation"
 msgstr "Действие"
