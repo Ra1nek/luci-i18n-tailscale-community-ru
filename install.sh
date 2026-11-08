@@ -6,7 +6,7 @@ umask 077
 VERSION='1.1.0-r2'
 PACKAGE="luci-app-tailscale-community-ru-${VERSION}.apk"
 SHA256='cbf31bb32a6a8f1ebfd8a05c5974da79d0bca7e1f9307a896dd3adb962067505'
-URL="https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/releases/download/v${VERSION}/${PACKAGE}"
+URL='https://api.github.com/repos/Ra1nek/luci-i18n-tailscale-community-ru/releases/assets/723574867?download=1'
 
 fail() {
     printf '%s\n' "$*" >&2
@@ -36,7 +36,8 @@ trap cleanup EXIT
 trap 'exit 1' HUP INT TERM
 
 printf 'Скачиваем Tailscale LuCI RU %s…\n' "$VERSION"
-wget -T 60 -O "$work_dir/$PACKAGE" "$URL" || fail 'Не удалось скачать пакет. Проверьте подключение к GitHub.'
+wget -T 60 --header='Accept: application/octet-stream' -O "$work_dir/$PACKAGE" "$URL" || \
+    fail 'Не удалось скачать пакет. Проверьте подключение к GitHub.'
 
 actual_sha256=$(sha256sum "$work_dir/$PACKAGE")
 actual_sha256=${actual_sha256%% *}
