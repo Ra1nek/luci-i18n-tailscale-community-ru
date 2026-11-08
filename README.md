@@ -98,7 +98,6 @@ tailscale-luci-ru/
 ├── .github/workflows/           Автоматическая сборка
 ├── scripts/                     Сценарии сборки
 ├── tests/                       Проверка перевода
-├── CONTRIBUTING.md              Участие в проекте
 ├── NOTICE                       Авторы и источники
 └── LICENSE                      Лицензия Apache-2.0
 ```
@@ -142,7 +141,7 @@ rm -f /tmp/luci-indexcache.*
 
 Перед публикацией скройте адреса устройств, ключи и другие личные данные.
 
-**[Сообщить об ошибке →](https://github.com/Ra1nek/tailscale-luci-ru/issues/new)** · **[Предложить улучшение →](CONTRIBUTING.md)**
+**[Сообщить об ошибке →](https://github.com/Ra1nek/tailscale-luci-ru/issues/new)** · **[Предложить улучшение →](https://github.com/Ra1nek/tailscale-luci-ru/issues/new)**
 
 ## Авторы и благодарности
 
