@@ -3,7 +3,7 @@
 set -eu
 umask 077
 
-VERSION='1.1.0-r1'
+VERSION='1.1.0-r2'
 PACKAGE="luci-app-tailscale-community-ru-${VERSION}.apk"
 SHA256='10f3e4782b766e164efbb66105c692293d699172120171f1346efdd0c7ee7af1'
 URL="https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/releases/download/v${VERSION}/${PACKAGE}"
@@ -16,6 +16,7 @@ fail() {
 [ "$#" -eq 0 ] || fail 'Запустите установщик без дополнительных параметров.'
 [ "$(id -u)" -eq 0 ] || fail 'Подключитесь к роутеру под пользователем root.'
 [ -r /etc/openwrt_release ] || fail 'Установщик предназначен для OpenWrt 25.12.'
+# shellcheck source=/dev/null
 . /etc/openwrt_release
 case "${DISTRIB_RELEASE:-}" in
     25.12|25.12.*) ;;

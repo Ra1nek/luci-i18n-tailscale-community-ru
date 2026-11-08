@@ -29,6 +29,9 @@ jobs:
       - name: Check installer syntax
         run: sh -n install.sh
 
+      - name: Test installer failure handling
+        run: python3 tests/installer.py
+
       - name: Install SDK prerequisites
         run: |
           sudo apt-get update

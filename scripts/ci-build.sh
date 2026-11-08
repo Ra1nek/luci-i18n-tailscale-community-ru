@@ -6,9 +6,12 @@ readonly sdk_version=25.12.6
 readonly sdk_archive=openwrt-sdk-25.12.6-x86-64_gcc-14.3.0_musl.Linux-x86_64.tar.zst
 readonly sdk_sha256=1864152619092e781fa36a401960c8e9ae42d6a364c44ee5f0b197ca5f3c0fcc
 readonly sdk_url="https://downloads.openwrt.org/releases/${sdk_version}/targets/x86/64/${sdk_archive}"
-readonly source_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
-readonly work_dir="${SDK_WORKDIR:-$(mktemp -d -t tailscale-ru-sdk.XXXXXXXX)}"
-readonly artifacts_dir="${ARTIFACTS_DIR:-${source_dir}/artifacts}"
+source_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+readonly source_dir
+work_dir="${SDK_WORKDIR:-$(mktemp -d -t tailscale-ru-sdk.XXXXXXXX)}"
+readonly work_dir
+artifacts_dir="${ARTIFACTS_DIR:-${source_dir}/artifacts}"
+readonly artifacts_dir
 
 if [[ ${EUID} -eq 0 ]]; then
 	printf '%s\n' 'Run the OpenWrt SDK as a regular user.' >&2
