@@ -1,0 +1,14 @@
+{% import { readfile } from 'fs';
+   include('header', { css: readfile('/www/luci-static/resources/tailscale-ru/layout.css') });
+%}
+<script src="{{ resource }}/tailscale-ru/units.js"></script>
+<script src="{{ resource }}/tailscale-ru/health.js"></script>
+<div id="view">
+    <div class="spinning">{{ _('Loading view…') }}</div>
+    <script>
+        L.require('ui').then(function(ui) {
+            ui.instantiateView('tailscale');
+        });
+    </script>
+</div>
+{% include('footer') %}

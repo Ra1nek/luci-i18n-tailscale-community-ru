@@ -1,0 +1,63 @@
+name: Build OpenWrt package
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: OpenWrt 25.12.6 · x86/64 SDK
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Validate source and translations
+        run: python3 scripts/check.py
+
+      - name: Install SDK prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y \
+            build-essential clang curl file flex gawk gettext git \
+            libncurses-dev libssl-dev python3 python3-setuptools \
+            rsync swig unzip zlib1g-dev zstd
+
+      - name: Compile with the official OpenWrt SDK
+        env:
+          SDK_WORKDIR: ${{ runner.temp }}/tailscale-ru-sdk
+          ARTIFACTS_DIR: ${{ github.workspace }}/artifacts
+        run: bash scripts/ci-build.sh
+
+      - name: Upload package and checksums
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: luci-app-tailscale-community-ru-openwrt-25.12.6
+          path: |
+            artifacts/*.apk
+            artifacts/SHA256SUMS
+            artifacts/build-info.txt
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload build logs
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: openwrt-sdk-build-logs
+          path: artifacts/*.log
+          if-no-files-found: ignore
+          retention-days: 14

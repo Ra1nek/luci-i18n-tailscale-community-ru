@@ -1,0 +1,514 @@
+# Based on nagual2/luci-i18n-tailscale-community-ru (Apache-2.0).
+# Reviewed and extended for the Tailscale Community interface.
+msgid ""
+msgstr "Project-Id-Version: luci-app-tailscale-community-ru 1.1.0\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "%s failed"
+msgstr "Не удалось выполнить: %s"
+
+msgid "(Experimental) Reduce Memory Usage"
+msgstr "Снизить расход памяти (экспериментально)"
+
+msgid "1. Enable \"Advertise Exit Node\"."
+msgstr "1. Включите «Разрешить выход в интернет через этот роутер»."
+
+msgid "1. Select \"Accept Routes\" (to access remote devices)."
+msgstr "1. Включите «Принимать маршруты», чтобы подключаться к устройствам в удалённых подсетях."
+
+msgid "2. Click \"Auto Configure Firewall\" (it forwards Tailscale traffic to WAN)."
+msgstr "2. Нажмите «Настроить межсетевой экран», чтобы разрешить выход из Tailscale в интернет."
+
+msgid "2. In \"Advertise Routes\", select your local subnet (to allow remote devices to access this LAN)."
+msgstr "2. В поле «Предоставить доступ к подсетям» выберите свою локальную подсеть, чтобы сделать её доступной через Tailscale."
+
+msgid "3. Click \"Auto Configure Firewall\" (to allow traffic forwarding)."
+msgstr "3. Нажмите «Настроить межсетевой экран», чтобы разрешить пересылку трафика."
+
+msgid "3. In the Tailscale admin console, edit this device under the route settings and approve it as an Exit Node."
+msgstr "3. Откройте настройки маршрутов этого устройства в панели Tailscale и разрешите использовать его для выхода в интернет."
+
+msgid "4. On the client, set this device as its exit node."
+msgstr "4. На телефоне или компьютере выберите это устройство для выхода в интернет."
+
+msgid "Accept Routes"
+msgstr "Принимать маршруты"
+
+msgid "Account Settings"
+msgstr "Аккаунт"
+
+msgid "Advertise Exit Node"
+msgstr "Разрешить выход в интернет через этот роутер"
+
+msgid "Advertise Routes"
+msgstr "Предоставить доступ к подсетям"
+
+msgid "Advertise subnet routes behind this device. Select from the detected subnets below or enter custom routes (comma-separated)."
+msgstr "Выберите подсети, доступ к которым нужно предоставить через этот роутер, или укажите их через запятую."
+
+msgid "Allow LAN Access"
+msgstr "Сохранить доступ к локальной сети"
+
+msgid "Allow accepting routes announced by other nodes."
+msgstr "Подключаться к подсетям, доступ к которым предоставляют другие устройства Tailscale."
+
+msgid "Allow connecting to this device through the SSH function of Tailscale."
+msgstr "Разрешить подключение к этому роутеру через Tailscale SSH."
+
+msgid "Another firewall reload is already running"
+msgstr "Межсетевой экран уже перезагружается. Дождитесь завершения."
+
+msgid "Are you sure you want to log out?"
+msgstr "Выйти из Tailscale?"
+
+msgid "Auto Configure Firewall"
+msgstr "Настроить межсетевой экран"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Click to Log out account on this device."
+msgstr "Выйти из учётной записи на этом устройстве."
+
+msgid "Click to get a login URL for this device."
+msgstr "Получить ссылку, чтобы подключить это устройство к Tailscale."
+
+msgid "Collecting data ..."
+msgstr "Сбор данных…"
+
+msgid "Configuration committed, reloading network and firewall. This can take a moment."
+msgstr "Настройки сохранены. Сеть и межсетевой экран перезагружаются. Подождите."
+
+msgid "Configuring firewall"
+msgstr "Настраиваем межсетевой экран…"
+
+msgid "Confirm Logout"
+msgstr "Подтверждение выхода"
+
+msgid "Connection Info"
+msgstr "Подключение"
+
+msgid "Controls how Tailscale DNS is handled."
+msgstr "Выберите, как обрабатывать DNS-запросы Tailscale."
+
+msgid "Could not open a new tab. Please check if your browser or an extension blocked the pop-up."
+msgstr "Не удалось открыть вкладку. Проверьте блокировку всплывающих окон."
+
+msgid "Custom Login Server"
+msgstr "Свой сервер авторизации"
+
+msgid "Custom Login Server Auth Key"
+msgstr "Ключ авторизации"
+
+msgid "DNS Mode"
+msgstr "Режим DNS"
+
+msgid "Declare this device as an Exit Node."
+msgstr "Чтобы другие устройства могли выходить в интернет через этот роутер, разрешите его использование в панели Tailscale."
+
+msgid "Devices List"
+msgstr "Устройства"
+
+msgid "Disable Firewall Configuration"
+msgstr "Отключить автоматические правила Tailscale"
+
+msgid "Disable SNAT"
+msgstr "Отключить SNAT"
+
+msgid "Disable Source NAT (SNAT) for traffic to advertised routes. Most users should leave this unchecked."
+msgstr "Сохраняет исходные IP-адреса при обращении к доступным через роутер подсетям. Обычно эту опцию включать не нужно."
+
+msgid "Disable Tailscale netfilter auto-configuration (--netfilter-mode=off)."
+msgstr "Запретить Tailscale автоматически создавать правила межсетевого экрана."
+
+msgid "Disabled"
+msgstr "Отключено"
+
+msgid "Disabled: system DNS only."
+msgstr "Отключено: только системный DNS."
+
+msgid "Disconnect from Tailscale and expire current node key."
+msgstr "Отключиться от Tailscale и аннулировать ключ узла."
+
+msgid "Empty reply from server"
+msgstr "Сервер вернул пустой ответ."
+
+msgid "Enable Peer Relay"
+msgstr "Ретранслировать соединения"
+
+msgid "Enable Tailscale SSH"
+msgstr "Разрешить подключение по SSH"
+
+msgid "Enable Tailscale Service"
+msgstr "Включить службу Tailscale"
+
+msgid "Enable Web Interface"
+msgstr "Включить веб-интерфейс Tailscale"
+
+msgid "Enable or disable the Tailscale service. When disabled, the service will be stopped and the process will be killed."
+msgstr "Включает или выключает Tailscale. При выключении останавливает службу."
+
+msgid "Enable this device as a Peer Relay server. Requires a public IP and an UDP port open on the router."
+msgstr "Позволяет передавать соединения других устройств Tailscale через этот роутер. Нужны публичный IP-адрес и открытый UDP-порт."
+
+msgid "Enabled"
+msgstr "Включено"
+
+msgid "Enabling this option can reduce memory usage, but it may sacrifice some performance (set GOGC=10)."
+msgstr "Снижает потребление памяти, но может ухудшить производительность."
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Error caching DERP region map: %s"
+msgstr "Ошибка кэширования карты DERP: %s"
+
+msgid "Error fetching DERP region map: %s"
+msgstr "Ошибка загрузки карты DERP: %s"
+
+msgid "Error reading cached DERP region map: %s"
+msgstr "Ошибка чтения кэша карты DERP: %s"
+
+msgid "Essential configuration for Subnet Routing (Site-to-Site) and Exit Node features."
+msgstr "Настраивает пересылку трафика для доступа к подсетям и выхода в интернет через этот роутер."
+
+msgid "Exit Node"
+msgstr "Выход в интернет"
+
+msgid "Expose a web interface on port 5252 for managing this node over Tailscale."
+msgstr "Открыть веб-интерфейс на порту 5252 для управления узлом через Tailscale."
+
+msgid "Failed to configure firewall: %s"
+msgstr "Не удалось настроить межсетевой экран: %s"
+
+msgid "Failed to get login URL. You may close this tab."
+msgstr "Не удалось получить ссылку для входа. Эту вкладку можно закрыть."
+
+msgid "Failed to get login URL: %s"
+msgstr "Не удалось получить ссылку для входа: %s"
+
+msgid "Failed to load logs: %s"
+msgstr "Не удалось загрузить журнал: %s"
+
+msgid "Filter peers by name, IP, or OS..."
+msgstr "Найти по имени, IP-адресу или ОС…"
+
+msgid "Filter:"
+msgstr "Поиск:"
+
+msgid "Firewall Mode"
+msgstr "Межсетевой экран"
+
+msgid "Firewall configuration already applied."
+msgstr "Межсетевой экран уже настроен."
+
+msgid "Firewall configuration applied."
+msgstr "Межсетевой экран настроен."
+
+msgid "Firewall reload failed"
+msgstr "Не удалось перезагрузить межсетевой экран."
+
+msgid "General Settings"
+msgstr "Общие настройки"
+
+msgid "Hostname"
+msgstr "Имя устройства"
+
+msgid "How to enable Exit Node?"
+msgstr "Как разрешить выход в интернет через этот роутер?"
+
+msgid "How to enable Site-to-Site?"
+msgstr "Как соединить локальные сети через Tailscale?"
+
+msgid "If the timeout is displayed, you can refresh the page and click Login again."
+msgstr "Если время ожидания истекло, обновите страницу и снова нажмите «Войти»."
+
+msgid "If you are using custom login server but not providing an Auth Key, will redirect to the login page without pre-filling the key."
+msgstr "Если ключ не указан, откроется страница входа на указанный сервер."
+
+msgid "Invalid Date"
+msgstr "Неверная дата"
+
+msgid "Invalid response from server."
+msgstr "Не удалось обработать ответ сервера."
+
+msgid "It creates the tailscale interface, adds it to a firewall zone, and sets up forwarding between LAN and Tailscale, plus Tailscale to WAN."
+msgstr "Создаёт интерфейс tailscale, добавляет его в зону межсетевого экрана и разрешает обмен трафиком между локальной сетью и Tailscale, а также выход из Tailscale в интернет."
+
+msgid "Just now"
+msgstr "Только что"
+
+msgid "LOGGED OUT"
+msgstr "ВХОД НЕ ВЫПОЛНЕН"
+
+msgid "Last Seen"
+msgstr "Последняя активность"
+
+msgid "Leave blank for default Tailscale control plane."
+msgstr "Оставьте поле пустым, чтобы использовать сервер Tailscale."
+
+msgid "Loading logs"
+msgstr "Загружаем журнал…"
+
+msgid "Loading view…"
+msgstr "Загружаем страницу…"
+
+msgid "Logging out..."
+msgstr "Выход…"
+
+msgid "Login"
+msgstr "Войти"
+
+msgid "Logout"
+msgstr "Выйти"
+
+msgid "Logout failed: %s"
+msgstr "Не удалось выйти из Tailscale. %s"
+
+msgid "Logs"
+msgstr "Журнал"
+
+msgid "MagicDNS: Tailscale overrides resolv.conf."
+msgstr "MagicDNS: Tailscale задаёт DNS-серверы в resolv.conf."
+
+msgid "Masquerading and MSS Clamping (MTU fix) are enabled to keep connections stable."
+msgstr "Для стабильной связи включает подмену исходящего адреса и ограничение размера TCP-сегментов."
+
+msgid "N/A"
+msgstr "н/д"
+
+msgid "NOT RUNNING"
+msgstr "ОСТАНОВЛЕНА"
+
+msgid "No matching peer devices found."
+msgstr "По вашему запросу устройства не найдены."
+
+msgid "No peer devices found."
+msgstr "Другие устройства не найдены."
+
+msgid "No tailscale-related logs found."
+msgstr "В журнале пока нет записей Tailscale."
+
+msgid "None"
+msgstr "Нет"
+
+msgid "Now"
+msgstr "Сейчас"
+
+msgid "OS"
+msgstr "ОС"
+
+msgid "Offline"
+msgstr "Не в сети"
+
+msgid "Online"
+msgstr "В сети"
+
+msgid "OpenWrt Forward"
+msgstr "Через OpenWrt"
+
+msgid "OpenWrt Forward: MagicDNS via dnsmasq forwarding.(Only support ts.net)"
+msgstr "Через OpenWrt: dnsmasq пересылает запросы MagicDNS. Поддерживаются только имена в домене ts.net."
+
+msgid "Operation"
+msgstr "Действие"
+
+msgid "Optional: Specify a custom control server URL (e.g., a Headscale instance, %s)."
+msgstr "При необходимости укажите адрес своего сервера авторизации, например Headscale (%s)."
+
+msgid "Optional: Specify a custom control server URL (e.g., a Headscale instance, https://example.com)."
+msgstr "При необходимости укажите адрес своего сервера авторизации, например Headscale (https://example.com)."
+
+msgid "Optional: Specify an authentication key for the custom control server. Leave blank if not required."
+msgstr "Укажите ключ авторизации своего сервера, если он требуется."
+
+msgid "Peer Relay Port"
+msgstr "Порт ретрансляции"
+
+msgid "Please use the login button in the settings below to authenticate."
+msgstr "Нажмите «Войти» в настройках ниже, чтобы подключить устройство к Tailscale."
+
+msgid "Please wait."
+msgstr "Подождите."
+
+msgid "RUNNING"
+msgstr "РАБОТАЕТ"
+
+msgid "RX"
+msgstr "Приём"
+
+msgid "Refresh"
+msgstr "Обновить"
+
+msgid "Reloading firewall..."
+msgstr "Перезагружаем межсетевой экран…"
+
+msgid "Requesting Login URL..."
+msgstr "Получаем ссылку для входа…"
+
+msgid "Requesting Tailscale login URL... Please wait."
+msgstr "Получаем ссылку для входа в Tailscale. Подождите."
+
+msgid "Select an exit node from the list. If enabled, Allow LAN Access is enabled implicitly."
+msgstr "Выберите устройство для выхода в интернет. Доступ к локальной сети включится автоматически."
+
+msgid "Select the firewall backend for Tailscale to use. Requires service restart to take effect."
+msgstr "Выберите механизм межсетевого экрана для Tailscale. После изменения перезапустите службу."
+
+msgid "Service Status"
+msgstr "Состояние службы"
+
+msgid "Shields Up"
+msgstr "Блокировать входящие подключения"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Subnet routing is enabled, but IP forwarding is disabled. Check that IP forwarding is enabled on your machine."
+msgstr "Настроены маршруты к подсетям, но пересылка IP-пакетов отключена. Включите её на роутере."
+
+msgid "Successfully logged out."
+msgstr "Выход выполнен."
+
+msgid "TAILSCALE NOT FOUND"
+msgstr "TAILSCALE НЕ УСТАНОВЛЕН"
+
+msgid "TUN Mode"
+msgstr "Режим TUN"
+
+msgid "TX"
+msgstr "Передача"
+
+msgid "Tailnet Name"
+msgstr "Сеть Tailscale"
+
+msgid "Tailscale"
+msgstr "Tailscale"
+
+msgid "Tailscale Health Check: %s"
+msgstr "Проверка состояния Tailscale: %s"
+
+msgid "Tailscale IP"
+msgstr "IP-адрес в Tailscale"
+
+msgid "Tailscale IPv4"
+msgstr "IPv4 в Tailscale"
+
+msgid "Tailscale IPv6"
+msgstr "IPv6 в Tailscale"
+
+msgid "Tailscale Login"
+msgstr "Вход в Tailscale"
+
+msgid "Tailscale cannot connect because the network is down. Check your Internet connection."
+msgstr "Tailscale не может подключиться: сеть недоступна. Проверьте подключение к интернету."
+
+msgid "Tailscale could not connect to any relay server. Check your Internet connection."
+msgstr "Не удалось подключиться ни к одному серверу ретрансляции Tailscale. Проверьте подключение к интернету."
+
+msgid "Tailscale couldn't listen for incoming UDP connections."
+msgstr "Tailscale не удалось открыть порт для входящих UDP-соединений."
+
+msgid "Tailscale day"
+msgstr "дн."
+
+msgid "Tailscale days"
+msgstr "дн."
+
+msgid "Tailscale device address"
+msgstr "IP‑адрес в Tailscale"
+
+msgid "Tailscale hour"
+msgstr "ч"
+
+msgid "Tailscale hours"
+msgstr "ч"
+
+msgid "Tailscale is a mesh VPN solution that makes it easy to connect your devices securely. This configuration page allows you to manage Tailscale settings on your OpenWrt device."
+msgstr "Tailscale безопасно соединяет ваши устройства через интернет. Здесь можно настроить Tailscale на роутере OpenWrt."
+
+msgid "Tailscale is starting. Please wait."
+msgstr "Tailscale запускается. Подождите."
+
+msgid "Tailscale is stopped."
+msgstr "Tailscale остановлен."
+
+msgid "Tailscale minute"
+msgstr "мин"
+
+msgid "Tailscale minutes"
+msgstr "мин"
+
+msgid "Tailscale received data"
+msgstr "Приём"
+
+msgid "Tailscale sent data"
+msgstr "Передача"
+
+msgid "Tailscale status error"
+msgstr "Не удалось проверить состояние Tailscale"
+
+msgid "The Tailscale to WAN forwarding is what lets clients send their internet traffic through this device as an Exit Node."
+msgstr "Пересылка из Tailscale в WAN позволяет подключённым устройствам выходить в интернет через этот роутер."
+
+msgid "This can take up to 30 seconds."
+msgstr "Это может занять до 30 секунд."
+
+msgid "This will disconnect this device from your Tailnet and require you to re-authenticate."
+msgstr "Устройство отключится от сети Tailscale. Чтобы подключить его снова, потребуется войти в аккаунт."
+
+msgid "Timed out waiting for the firewall reload"
+msgstr "Не удалось дождаться перезагрузки межсетевого экрана. Проверьте его состояние."
+
+msgid "UDP port for the Peer Relay service. Open this port on your router firewall/NAT."
+msgstr "UDP-порт для ретрансляции соединений. Разрешите входящие подключения к этому порту и при необходимости настройте проброс порта на основном роутере."
+
+msgid "Unable to connect to the Tailscale coordination server to synchronize the state of the tailnet. Peer reachability might degrade over time."
+msgstr "Не удаётся связаться с сервером Tailscale и обновить сведения о сети. Со временем связь с другими устройствами может ухудшиться."
+
+msgid "Unable to connect to the Tailscale coordination server to synchronize the state of your tailnet. Peer reachability might degrade over time."
+msgstr "Не удаётся связаться с сервером Tailscale и обновить сведения о вашей сети. Со временем связь с другими устройствами может ухудшиться."
+
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "When enabled, blocks all inbound connections from the Tailscale network."
+msgstr "Блокирует все входящие подключения из сети Tailscale."
+
+msgid "When using the exit node, access to the local LAN is allowed."
+msgstr "Сохраняет доступ к локальной сети, когда для выхода в интернет используется другое устройство Tailscale."
+
+msgid "You are logged out."
+msgstr "Вход в Tailscale не выполнен."
+
+msgid "You have unapplied changes. Save & Apply them first so the firewall matches the form."
+msgstr "Сначала нажмите «Сохранить и применить», чтобы настроить межсетевой экран с учётом ваших изменений."
+
+msgid "[Important] Log in to the Tailscale admin console and manually enable \"Subnet Routes\" for this device."
+msgstr "Важно: откройте панель Tailscale и разрешите маршруты к подсетям этого устройства."
+
+msgid "[Important] Step 3 cannot be done here: it needs your Tailscale account."
+msgstr "Важно: шаг 3 нужно выполнить в панели Tailscale под своим аккаунтом. На этой странице это сделать нельзя."
+
+msgid "ago"
+msgstr "назад"
+
+msgid "day"
+msgstr "дн."
+
+msgid "days"
+msgstr "дн."
+
+msgid "hour"
+msgstr "ч"
+
+msgid "hours"
+msgstr "ч"
+
+msgid "minute"
+msgstr "мин"
+
+msgid "minutes"
+msgstr "мин"
