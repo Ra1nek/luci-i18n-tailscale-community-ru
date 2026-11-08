@@ -12,7 +12,7 @@ luci-app-tailscale-community
 Copyright contributors to openwrt/luci and tokisaki-galaxy/luci-app-tailscale-community
 
 
-The Russian translation was reviewed and extended in the Zapret Manager adaptation.
+The Russian translation is reviewed and extended as part of this project.
 The combined package, scoped LuCI layout and build integration are maintained by Ra1nek.
 The original Tailscale Community view in tests/fixtures is retained for translation coverage checks.
 Upstream application: https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community
