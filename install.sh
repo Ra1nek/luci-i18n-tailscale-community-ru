@@ -6,7 +6,7 @@ umask 077
 VERSION='1.1.0-r1'
 PACKAGE="luci-app-tailscale-community-ru-${VERSION}.apk"
 SHA256='10f3e4782b766e164efbb66105c692293d699172120171f1346efdd0c7ee7af1'
-URL="https://github.com/Ra1nek/tailscale-luci-ru/releases/download/v${VERSION}/${PACKAGE}"
+URL="https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/releases/download/v${VERSION}/${PACKAGE}"
 
 fail() {
     printf '%s\n' "$*" >&2

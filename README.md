@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml"><img src="https://github.com/Ra1nek/tailscale-luci-ru/actions/workflows/build.yml/badge.svg?branch=main" alt="Статус сборки OpenWrt"></a>
+  <a href="https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/actions/workflows/build.yml"><img src="https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/actions/workflows/build.yml/badge.svg?branch=main" alt="Статус сборки OpenWrt"></a>
   <a href="#совместимость"><img src="https://img.shields.io/badge/OpenWrt-25.12-2563eb?style=flat-square" alt="OpenWrt 25.12"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-64748b?style=flat-square" alt="Лицензия Apache-2.0"></a>
 </p>
@@ -20,7 +20,7 @@
   <a href="#что-меняется">Возможности</a> ·
   <a href="#совместимость">Совместимость</a> ·
   <a href="#структура-проекта">Структура проекта</a> ·
-  <a href="https://github.com/Ra1nek/tailscale-luci-ru/issues">Сообщить об ошибке</a>
+  <a href="https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/issues">Сообщить об ошибке</a>
 </p>
 
 ---
@@ -45,7 +45,7 @@
 Подключитесь к роутеру по SSH под пользователем root и выполните команду.
 
 ```sh
-sh <(wget -O - https://raw.githubusercontent.com/Ra1nek/tailscale-luci-ru/main/install.sh)
+sh <(wget -O - https://raw.githubusercontent.com/Ra1nek/luci-i18n-tailscale-community-ru/main/install.sh)
 ```
 
 Скрипт скачает пакет, проверит его целостность и установит дополнение вместе с необходимыми компонентами. После установки выберите **русский язык в LuCI** и откройте **VPN → Tailscale**.
@@ -66,7 +66,7 @@ apk del luci-app-tailscale-community-ru && rm -f /tmp/luci-indexcache.*
 Перевод и оформление объединены в одном пакете. Репозиторий организован как feed для стандартной сборки OpenWrt.
 
 ```text
-tailscale-luci-ru/
+luci-i18n-tailscale-community-ru/
 ├── install.sh                   Установка на роутер
 ├── package/
 │   └── luci-app-tailscale-community-ru/
@@ -120,7 +120,7 @@ rm -f /tmp/luci-indexcache.*
 
 Перед публикацией скройте адреса устройств, ключи и другие личные данные.
 
-**[Сообщить об ошибке →](https://github.com/Ra1nek/tailscale-luci-ru/issues/new)** · **[Предложить улучшение →](https://github.com/Ra1nek/tailscale-luci-ru/issues/new)**
+**[Сообщить об ошибке →](https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/issues/new)** · **[Предложить улучшение →](https://github.com/Ra1nek/luci-i18n-tailscale-community-ru/issues/new)**
 
 ## Авторы и благодарности
 
