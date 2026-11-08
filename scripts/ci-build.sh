@@ -49,7 +49,11 @@ CONFIG_PACKAGE_${package_name}=m
 EOF
 make defconfig
 grep --fixed-strings --line-regexp "CONFIG_PACKAGE_${package_name}=m" .config
-make --jobs "$(nproc)" "package/${package_name}/compile" V=s
+# Only po2lmo is needed to build this architecture-independent add-on.
+# Runtime dependencies stay in APK metadata and come from OpenWrt feeds.
+make --jobs "$(nproc)" package/luci-base/host/compile V=s
+test -x staging_dir/hostpkg/bin/po2lmo
+make --jobs "$(nproc)" "package/${package_name}/compile" V=s NO_DEPS=1
 
 mapfile -d '' built_packages < <(find bin/packages -type f -name "${package_name}-*.apk" -print0)
 if [[ ${#built_packages[@]} -ne 1 ]]; then

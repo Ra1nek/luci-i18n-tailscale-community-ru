@@ -52,7 +52,8 @@ printf '\nsrc-link tailscale_ru /path/to/tailscale-luci-ru\n' >> feeds.conf
 ./scripts/feeds update tailscale_ru
 ./scripts/feeds install -p tailscale_ru luci-app-tailscale-community-ru
 make menuconfig
-make package/luci-app-tailscale-community-ru/compile V=s
+make package/luci-base/host/compile V=s
+make package/luci-app-tailscale-community-ru/compile V=s NO_DEPS=1
 ```
 
 Официальный feed LuCI должен быть подключён. В `menuconfig` выберите пакет в разделе LuCI → Applications.
