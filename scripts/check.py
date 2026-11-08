@@ -42,7 +42,7 @@ def translation_keys(source):
 
 def main():
     catalog = read_po(PACKAGE / 'po/ru/tailscale.po')
-    view = (ROOT / 'tests/fixtures/tailscale-4.5.1.js').read_text(encoding='utf-8')
+    view = '\n'.join(path.read_text(encoding='utf-8') for path in (ROOT / 'tests/fixtures').glob('tailscale-*.js'))
     required = translation_keys(view)
     for match in re.finditer(r"fmt\([^,]+,\s*'([^']+)',\s*'([^']+)'\)", view):
         required.update(match.groups())

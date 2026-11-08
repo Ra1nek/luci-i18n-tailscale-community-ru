@@ -53,6 +53,12 @@ assert.equal(page.context.window.TR.RX, 'Приём');
 vm.runInContext(health, page.context);
 assert.equal(page.textNode.nodeValue, 'Tailscale остановлен.');
 const element = { nodeType: 1, closest: () => true };
+for (const match of health.matchAll(/_\(("(?:\\.|[^"])*")\)/g)) {
+    const message = JSON.parse(match[1]);
+    page.textNode.nodeValue = message;
+    page.mutation()([{ target: element }]);
+    assert.equal(page.textNode.nodeValue, catalog.get(message));
+}
 page.textNode.nodeValue = 'A new unknown diagnostic message';
 page.mutation()([{ target: element }]);
 assert.equal(page.textNode.nodeValue, 'A new unknown diagnostic message');

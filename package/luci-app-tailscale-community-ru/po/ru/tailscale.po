@@ -57,6 +57,9 @@ msgstr "Разрешить подключение к этому роутеру �
 msgid "Another firewall reload is already running"
 msgstr "Межсетевой экран уже перезагружается. Дождитесь завершения."
 
+msgid "Applying changes..."
+msgstr "Применяем настройки…"
+
 msgid "Are you sure you want to log out?"
 msgstr "Выйти из Tailscale?"
 
@@ -102,6 +105,12 @@ msgstr "Ключ авторизации"
 msgid "DNS Mode"
 msgstr "Режим DNS"
 
+msgid "Daemon MTU"
+msgstr "MTU туннеля"
+
+msgid "Daemon Settings"
+msgstr "Настройки службы"
+
 msgid "Declare this device as an Exit Node."
 msgstr "Чтобы другие устройства могли выходить в интернет через этот роутер, разрешите его использование в панели Tailscale."
 
@@ -110,6 +119,9 @@ msgstr "Устройства"
 
 msgid "Disable Firewall Configuration"
 msgstr "Отключить автоматические правила Tailscale"
+
+msgid "Disable MagicDNS"
+msgstr "Отключить MagicDNS"
 
 msgid "Disable SNAT"
 msgstr "Отключить SNAT"
@@ -159,6 +171,9 @@ msgstr "Снижает потребление памяти, но может ух
 msgid "Error"
 msgstr "Ошибка"
 
+msgid "Error applying settings: %s"
+msgstr "Не удалось применить настройки. %s"
+
 msgid "Error caching DERP region map: %s"
 msgstr "Ошибка кэширования карты DERP: %s"
 
@@ -167,6 +182,9 @@ msgstr "Ошибка загрузки карты DERP: %s"
 
 msgid "Error reading cached DERP region map: %s"
 msgstr "Ошибка чтения кэша карты DERP: %s"
+
+msgid "Error saving settings: %s"
+msgstr "Не удалось сохранить настройки. %s"
 
 msgid "Essential configuration for Subnet Routing (Site-to-Site) and Exit Node features."
 msgstr "Настраивает пересылку трафика для доступа к подсетям и выхода в интернет через этот роутер."
@@ -186,8 +204,14 @@ msgstr "Не удалось получить ссылку для входа. Э�
 msgid "Failed to get login URL: %s"
 msgstr "Не удалось получить ссылку для входа: %s"
 
+msgid "Failed to get login URL: Invalid response from server."
+msgstr "Не удалось получить ссылку для входа. Не удалось обработать ответ сервера."
+
 msgid "Failed to load logs: %s"
 msgstr "Не удалось загрузить журнал: %s"
+
+msgid "Failed to save settings: %s"
+msgstr "Не удалось сохранить настройки. %s"
 
 msgid "Filter peers by name, IP, or OS..."
 msgstr "Найти по имени, IP-адресу или ОС…"
@@ -230,6 +254,9 @@ msgstr "Неверная дата"
 
 msgid "Invalid response from server."
 msgstr "Не удалось обработать ответ сервера."
+
+msgid "It automatically creates the tailscale interface, sets up firewall zones for LAN <-> Tailscale forwarding,"
+msgstr "Создаёт интерфейс tailscale и разрешает обмен трафиком между локальной сетью и Tailscale,"
 
 msgid "It creates the tailscale interface, adds it to a firewall zone, and sets up forwarding between LAN and Tailscale, plus Tailscale to WAN."
 msgstr "Создаёт интерфейс tailscale, добавляет его в зону межсетевого экрана и разрешает обмен трафиком между локальной сетью и Tailscale, а также выход из Tailscale в интернет."
@@ -278,6 +305,9 @@ msgstr "н/д"
 
 msgid "NOT RUNNING"
 msgstr "ОСТАНОВЛЕНА"
+
+msgid "Network Devices"
+msgstr "Устройства в сети"
 
 msgid "No matching peer devices found."
 msgstr "По вашему запросу устройства не найдены."
@@ -356,6 +386,12 @@ msgstr "Выберите механизм межсетевого экрана д
 
 msgid "Service Status"
 msgstr "Состояние службы"
+
+msgid "Set a custom MTU for the Tailscale daemon. Leave blank to use the default value."
+msgstr "Укажите MTU туннеля Tailscale. Оставьте поле пустым, чтобы использовать стандартное значение."
+
+msgid "Settings"
+msgstr "Настройки"
 
 msgid "Shields Up"
 msgstr "Блокировать входящие подключения"
@@ -444,6 +480,9 @@ msgstr "Приём"
 msgid "Tailscale sent data"
 msgstr "Передача"
 
+msgid "Tailscale settings applied successfully."
+msgstr "Настройки Tailscale применены."
+
 msgid "Tailscale status error"
 msgstr "Не удалось проверить состояние Tailscale"
 
@@ -471,6 +510,9 @@ msgstr "Не удаётся связаться с сервером Tailscale и 
 msgid "Unknown error"
 msgstr "Неизвестная ошибка"
 
+msgid "Use system DNS instead of MagicDNS."
+msgstr "Использовать DNS-серверы из настроек роутера вместо MagicDNS."
+
 msgid "Version"
 msgstr "Версия"
 
@@ -494,6 +536,9 @@ msgstr "Важно: шаг 3 нужно выполнить в панели Tails
 
 msgid "ago"
 msgstr "назад"
+
+msgid "and enables Masquerading and MSS Clamping (MTU fix) to ensure stable connections."
+msgstr "а для стабильной связи включает подмену исходящего IP-адреса и ограничивает размер TCP-сегментов."
 
 msgid "day"
 msgstr "дн."

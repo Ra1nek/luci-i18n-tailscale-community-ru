@@ -6,7 +6,7 @@ PKG_NAME:=luci-app-tailscale-community-ru
 PKG_VERSION:=1.1.0
 PKG_RELEASE:=1
 PKG_LICENSE:=Apache-2.0
-PKG_LICENSE_FILES:=LICENSE
+PKG_LICENSE_FILES:=LICENSE NOTICE
 PKG_MAINTAINER:=Ra1nek
 PKG_BUILD_DEPENDS:=luci-base/host
 PKG_BUILD_PARALLEL:=1
@@ -35,6 +35,7 @@ define Build/Prepare
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)/po/ru
 	$(CP) ./po/ru/tailscale.po $(PKG_BUILD_DIR)/po/ru/
 	$(CP) ./LICENSE $(PKG_BUILD_DIR)/LICENSE
+	$(CP) ./NOTICE $(PKG_BUILD_DIR)/NOTICE
 endef
 
 define Build/Configure
@@ -52,6 +53,8 @@ define Package/$(PKG_NAME)/install
 	$(CP) ./root/. $(1)/
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/tailscale.ru.lmo \
 		$(1)/usr/lib/lua/luci/i18n/tailscale.ru.lmo
+	$(INSTALL_DIR) $(1)/usr/share/doc/$(PKG_NAME)
+	$(INSTALL_DATA) ./LICENSE ./NOTICE $(1)/usr/share/doc/$(PKG_NAME)/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
