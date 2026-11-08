@@ -1,5 +1,8 @@
 /artifacts/
 /AGENTS.md
+/.markdownlint-cli2.jsonc
+/package.json
+/package-lock.json
 /node_modules/
 /build/
 __pycache__/
