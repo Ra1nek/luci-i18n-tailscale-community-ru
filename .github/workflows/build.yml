@@ -28,6 +28,11 @@ jobs:
       - name: Validate source and translations
         run: python3 scripts/check.py
 
+      - name: Check Markdown
+        run: |
+          npm ci --ignore-scripts
+          npm run lint:md
+
       - name: Install SDK prerequisites
         run: |
           sudo apt-get update

@@ -1,0 +1,13 @@
+{
+  "name": "tailscale-luci-ru-docs",
+  "private": true,
+  "scripts": {
+    "lint:md": "markdownlint-cli2"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.24.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
