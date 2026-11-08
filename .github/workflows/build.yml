@@ -2,24 +2,7 @@ name: Build OpenWrt package
 
 on:
   push:
-    branches: [main]
     tags: ['v*']
-    paths:
-      - 'package/**'
-      - 'install.sh'
-      - 'scripts/**'
-      - 'tests/**'
-      - '.github/workflows/build.yml'
-      - '.gitattributes'
-  pull_request:
-    branches: [main]
-    paths:
-      - 'package/**'
-      - 'install.sh'
-      - 'scripts/**'
-      - 'tests/**'
-      - '.github/workflows/build.yml'
-      - '.gitattributes'
   workflow_dispatch:
 
 permissions:
