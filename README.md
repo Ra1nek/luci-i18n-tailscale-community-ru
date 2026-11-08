@@ -45,7 +45,7 @@
 Подключитесь к роутеру по SSH под пользователем root и выполните команду.
 
 ```sh
-sh -c 'set -e; f=$(mktemp /tmp/tailscale-ru-install.XXXXXX); trap "rm -f \"$f\"" EXIT; wget -T 60 -O "$f" https://raw.githubusercontent.com/Ra1nek/tailscale-luci-ru/main/install.sh; sh "$f"'
+sh <(wget -O - https://raw.githubusercontent.com/Ra1nek/tailscale-luci-ru/main/install.sh)
 ```
 
 Скрипт скачает пакет, проверит его целостность и установит дополнение вместе с необходимыми компонентами. После установки выберите **русский язык в LuCI** и откройте **VPN → Tailscale**.
